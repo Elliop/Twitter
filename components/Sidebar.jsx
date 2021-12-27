@@ -23,7 +23,7 @@ const Sidebar = () => {
       >
         <Image src="/twitter-icon.jpeg" width={30} height={30} />
       </div>
-      <div className="space-y-2 mt-4 mb-2.5 xl:ml-24">
+      <div className="space-y-2 mt-2 mb-2.5 xl:ml-24">
         <SidebarButtons text="Home" Icon={HomeIcon} active />
         <SidebarButtons text="Explore" Icon={HashtagIcon} />
         <SidebarButtons text="Notifications" Icon={BellIcon} />
@@ -33,6 +33,12 @@ const Sidebar = () => {
         <SidebarButtons text="Profile" Icon={UserIcon} />
         <SidebarButtons text="More" Icon={DotsCircleHorizontalIcon} />
       </div>
+      <button
+        className="hidden xl:inline ml-auto bg-[#1d9bf0] text-white 
+      rounded-full w-56 h-[52px] text-lg font-bold shadow-md hover:bg-[#1a8cd8]"
+      >
+        Tweet
+      </button>
     </div>
   );
 };
