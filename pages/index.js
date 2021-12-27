@@ -8,7 +8,7 @@ export default function Home() {
         <title>Twitter</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="flex bg-black min-h-screen max-w-[1500px] mx-auto">
         <Sidebar />
         {/* Feed */}
         {/* Widgets */}
