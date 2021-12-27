@@ -9,6 +9,7 @@ import {
   ClipboardListIcon,
   UserIcon,
   DotsCircleHorizontalIcon,
+  DotsHorizontalIcon,
 } from "@heroicons/react/outline";
 
 const Sidebar = () => {
@@ -39,6 +40,20 @@ const Sidebar = () => {
       >
         Tweet
       </button>
+      <div className="text-[#d9d9d9] flex items-center xl:w-56 justify-center xl:justify-between mt-auto hoverAnimation xl:ml-auto">
+        <div className="flex">
+          <img
+            src="https://pbs.twimg.com/profile_images/1399020768713916423/Ln2tk7R9_400x400.jpg"
+            alt="Profile"
+            className="h-10 w-10 rounded-full xl:mr-2.5"
+          />
+          <div className="hidden xl:inline leading-5">
+            <h4 className="font-bold">Elliop</h4>
+            <p className="text-[#6e767d]">@elliop</p>
+          </div>
+        </div>
+        <DotsHorizontalIcon className="h-5 hidden xl:inline ml-10" />
+      </div>
     </div>
   );
 };
