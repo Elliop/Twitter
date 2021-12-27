@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Sidebar from "../components/Sidebar";
 
 export default function Home() {
   return (
@@ -7,7 +8,11 @@ export default function Home() {
         <title>Twitter</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <main>
+        <Sidebar />
+        {/* Feed */}
+        {/* Widgets */}
+      </main>
     </div>
   );
 }
