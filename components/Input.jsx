@@ -15,6 +15,17 @@ const Input = () => {
   const filePickerRef = useRef(null);
   const [showEmojis, setShowEmojis] = useState(false);
 
+  const addImageToPost = (e) => {
+    const reader = new FileReader();
+    if (e.target.files[0]) {
+      reader.readAsDataURL(e.target.files[0]);
+    }
+
+    reader.onload = (readerEvent) => {
+      setSelectedFile(readerEvent.target.result);
+    };
+  };
+
   const addEmoji = (e) => {
     let sym = e.unified.split("-");
     let codesArray = [];
@@ -63,7 +74,12 @@ const Input = () => {
           <div className="flex items-center">
             <div className="icon" onClick={() => filePickerRef.current.click()}>
               <PhotographIcon className="text-[#1d9bf0] h-[22px]" />
-              <input type="file" ref={filePickerRef} hidden />
+              <input
+                type="file"
+                ref={filePickerRef}
+                hidden
+                onChange={addImageToPost}
+              />
             </div>
             <div className="icon rotate-90">
               <ChartBarIcon className="text-[#1d9bf0] h-[22px]" />
