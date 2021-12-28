@@ -25,7 +25,7 @@ const Logout = () => {
       </div>
       <Transition.Root show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative h-60 w-full" onClose={setIsOpen}>
-          <div className="absolute bottom-10 left-20">
+          <div className="absolute bottom-16 left-20">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -77,7 +77,10 @@ const Logout = () => {
                     </div>
                     <CheckIcon className="h-6 text-blue-500" />
                   </div>
-                  <div className="w-full h-[0.1px] bg-slate-300 mt-8"></div>
+                  <div className="w-full h-[0.1px] bg-slate-300 mt-4"></div>
+                  <div className="text-white text-md font-light py-4 hover:bg-zinc-900 w-full cursor-pointer">
+                    <span className="ml-4">Add an existing account</span>
+                  </div>
                   <div className="text-white text-md font-light py-4 hover:bg-zinc-900 w-full cursor-pointer">
                     <span className="ml-4">Log out @elliop</span>
                   </div>
