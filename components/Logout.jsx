@@ -1,9 +1,12 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { DotsHorizontalIcon, CheckIcon } from "@heroicons/react/outline";
+import { signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
+
 const Logout = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { data: session } = useSession();
   return (
     <div className="flex justify-center items-center">
       <div
@@ -12,13 +15,13 @@ const Logout = () => {
       >
         <div className="flex">
           <img
-            src="https://pbs.twimg.com/profile_images/1399020768713916423/Ln2tk7R9_400x400.jpg"
+            src={session.user.image}
             alt="Profile"
             className="h-10 w-10 rounded-full xl:mr-2.5"
           />
           <div className="hidden xl:inline leading-5">
-            <h4 className="font-bold">Elliop</h4>
-            <p className="text-[#6e767d]">@elliop</p>
+            <h4 className="font-bold">{session.user.name}</h4>
+            <p className="text-[#6e767d]">@{session.user.tag}</p>
           </div>
         </div>
         <DotsHorizontalIcon className="h-5 hidden xl:inline ml-10" />
@@ -66,13 +69,13 @@ const Logout = () => {
                   >
                     <div className="flex">
                       <img
-                        src="https://pbs.twimg.com/profile_images/1399020768713916423/Ln2tk7R9_400x400.jpg"
+                        src={session.user.image}
                         alt="Profile"
                         className="h-10 w-10 rounded-full xl:mr-2.5"
                       />
                       <div className="hidden xl:inline leading-5">
-                        <h4 className="font-bold">Elliop</h4>
-                        <p className="text-[#6e767d]">@elliop</p>
+                        <h4 className="font-bold">{session.user.name}</h4>
+                        <p className="text-[#6e767d]">@{session.user.tag}</p>
                       </div>
                     </div>
                     <CheckIcon className="h-6 text-blue-500" />
@@ -81,8 +84,11 @@ const Logout = () => {
                   <div className="text-white text-md font-light py-4 hover:bg-zinc-900 w-full cursor-pointer">
                     <span className="ml-4">Add an existing account</span>
                   </div>
-                  <div className="text-white text-md font-light py-4 hover:bg-zinc-900 w-full cursor-pointer">
-                    <span className="ml-4">Log out @elliop</span>
+                  <div
+                    onClick={signOut}
+                    className="text-white text-md font-light py-4 hover:bg-zinc-900 w-full cursor-pointer"
+                  >
+                    <span className="ml-4">{`Log out @${session.user.tag}`}</span>
                   </div>
                 </div>
               </div>
