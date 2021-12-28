@@ -77,7 +77,7 @@ const Logout = () => {
                     </div>
                     <CheckIcon className="h-6 text-blue-500" />
                   </div>
-                  <div className="w-full h-[0.1px] bg-slate-300 mt-4"></div>
+                  <div className="w-full h-[0.1px] bg-gray-700 mt-4"></div>
                   <div className="text-white text-md font-light py-4 hover:bg-zinc-900 w-full cursor-pointer">
                     <span className="ml-4">Add an existing account</span>
                   </div>
