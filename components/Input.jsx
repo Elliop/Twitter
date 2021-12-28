@@ -6,11 +6,22 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { useRef, useState } from "react";
+import { Picker } from "emoji-mart";
+import "emoji-mart/css/emoji-mart.css";
 
 const Input = () => {
   const [input, setInput] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
   const filePickerRef = useRef(null);
+  const [showEmojis, setShowEmojis] = useState(false);
+
+  const addEmoji = (e) => {
+    let sym = e.unified.split("-");
+    let codesArray = [];
+    sym.forEach((el) => codesArray.push("0x" + el));
+    let emoji = String.fromCodePoint(...codesArray);
+    setInput(input + emoji);
+  };
 
   return (
     <div
@@ -58,13 +69,26 @@ const Input = () => {
               <ChartBarIcon className="text-[#1d9bf0] h-[22px]" />
             </div>
 
-            <div className="icon">
+            <div className="icon" onClick={() => setShowEmojis(!showEmojis)}>
               <EmojiHappyIcon className="text-[#1d9bf0] h-[22px]" />
             </div>
 
             <div className="icon">
               <CalendarIcon className="text-[#1d9bf0] h-[22px]" />
             </div>
+            {showEmojis && (
+              <Picker
+                onSelect={addEmoji}
+                style={{
+                  position: "absolute",
+                  marginTop: "465px",
+                  marginLeft: -40,
+                  maxWidth: "320px",
+                  borderRadius: "20px",
+                }}
+                theme="dark"
+              />
+            )}
           </div>
         </div>
       </div>
