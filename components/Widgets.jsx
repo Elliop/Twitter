@@ -30,6 +30,7 @@ const followData = [
       "https://pbs.twimg.com/profile_images/1399020768713916423/Ln2tk7R9_400x400.jpg",
     username: "Elliop",
     tag: "@Elliop_Sh",
+    link: "https://twitter.com/Elliop_Sh",
   },
   {
     userImg:
@@ -93,9 +94,20 @@ const Widgets = () => {
               </h4>
               <h5 className="text-gray-500 text-[15px]">{result.tag}</h5>
             </div>
-            <button className="ml-auto bg-white text-black rounded-full font-bold text-sm py-1.5 px-3.5">
-              Follow
-            </button>
+            {result.link && (
+              <a
+                className="ml-auto bg-white text-black rounded-full font-bold text-sm py-1.5 px-3.5"
+                target="_blank"
+                href={result.link}
+              >
+                Follow
+              </a>
+            )}
+            {!result.link && (
+              <button className="ml-auto bg-white text-black rounded-full font-bold text-sm py-1.5 px-3.5">
+                Follow
+              </button>
+            )}
           </div>
         ))}
         <button
