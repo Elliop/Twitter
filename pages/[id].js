@@ -54,7 +54,7 @@ const PostPage = ({ providers }) => {
     <div>
       <Head>
         <title>
-          {post?.username} on Twitter: "{post?.text}"
+          {post?.username} on Twitter: &quot;{post?.text}&quot;
         </title>
         <link rel="icon" href="/twitter.svg" />
       </Head>
