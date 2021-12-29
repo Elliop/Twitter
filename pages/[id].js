@@ -58,6 +58,7 @@ const PostPage = ({ providers }) => {
             </div>
             Tweet
           </div>
+          <Post id={id} post={post} postPage />
         </div>
         {isOpen && <Modal />}
       </main>
