@@ -12,7 +12,16 @@ export default function Home({ providers }) {
   const { data: session } = useSession();
   const [isOpen, setIsOpen] = useRecoilState(modalState);
 
-  if (!session) return <Login providers={providers} />;
+  if (!session)
+    return (
+      <>
+        <Head>
+          <title>Twitter</title>
+          <link rel="icon" href="/twitter.svg" />
+        </Head>
+        <Login providers={providers} />
+      </>
+    );
 
   return (
     <div>

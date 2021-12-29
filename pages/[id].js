@@ -48,7 +48,16 @@ const PostPage = ({ providers }) => {
     [db, id]
   );
 
-  if (!session) return <Login providers={providers} />;
+  if (!session)
+    return (
+      <>
+        <Head>
+          <title>Twitter</title>
+          <link rel="icon" href="/twitter.svg" />
+        </Head>
+        <Login providers={providers} />
+      </>
+    );
 
   return (
     <div>
