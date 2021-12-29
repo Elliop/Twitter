@@ -39,9 +39,9 @@ const followData = [
   },
   {
     userImg:
-      "https://pbs.twimg.com/profile_images/1466001345324875784/4RrjsTR__400x400.jpg",
-    username: "Binance",
-    tag: "@Binance",
+      "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK_400x400.png",
+    username: "React",
+    tag: "@reactjs",
   },
 ];
 
