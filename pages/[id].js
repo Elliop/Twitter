@@ -85,8 +85,8 @@ const PostPage = ({ providers }) => {
               ))}
             </div>
           )}
-          <Widgets />
         </div>
+        <Widgets />
         {isOpen && <Modal />}
       </main>
     </div>
