@@ -16,7 +16,7 @@ const Logout = () => {
         <div className="flex">
           <img
             src={session.user.image}
-            alt="Profile"
+            alt=""
             className="h-10 w-10 rounded-full xl:mr-2.5"
           />
           <div className="hidden xl:inline leading-5">
@@ -75,7 +75,7 @@ const Logout = () => {
                     <div className="flex">
                       <img
                         src={session.user.image}
-                        alt="Profile"
+                        alt=""
                         className="h-10 w-10 rounded-full xl:mr-2.5"
                       />
                       <div className="hidden xl:inline leading-5">
