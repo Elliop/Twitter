@@ -26,9 +26,14 @@ const Logout = () => {
         </div>
         <DotsHorizontalIcon className="h-5 hidden xl:inline ml-10" />
       </div>
+
       <Transition.Root show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative h-60 w-full" onClose={setIsOpen}>
-          <div className="absolute bottom-16 left-20">
+        <Dialog
+          as="div"
+          className="fixed -bottom-60 left-16"
+          onClose={setIsOpen}
+        >
+          <div className="absolute bottom-0 left-20">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
