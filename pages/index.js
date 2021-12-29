@@ -6,6 +6,7 @@ import Login from "../components/Login";
 import Modal from "../components/Modal";
 import { modalState } from "../atoms/modalAtom";
 import { useRecoilState } from "recoil";
+import Widgets from "../components/Widgets";
 
 export default function Home({ providers }) {
   const { data: session } = useSession();
@@ -22,7 +23,7 @@ export default function Home({ providers }) {
       <main className="flex bg-black min-h-screen max-w-[1500px] mx-auto">
         <Sidebar />
         <Feed />
-        {/* Widgets */}
+        <Widgets />
         {isOpen && <Modal />}
       </main>
     </div>

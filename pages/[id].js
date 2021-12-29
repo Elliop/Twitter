@@ -18,6 +18,7 @@ import { ArrowLeftIcon } from "@heroicons/react/solid";
 import Head from "next/head";
 import Login from "../components/Login";
 import Comment from "../components/Comment";
+import Widgets from "../components/Widgets";
 
 const PostPage = ({ providers }) => {
   const { data: session } = useSession();
@@ -84,6 +85,7 @@ const PostPage = ({ providers }) => {
               ))}
             </div>
           )}
+          <Widgets />
         </div>
         {isOpen && <Modal />}
       </main>
