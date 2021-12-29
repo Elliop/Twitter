@@ -5,21 +5,20 @@ const trendingData = [
   {
     heading: "Blockchain Technology? How Does It Work?",
     description:
-      "Blockchain: a decentralized, distributed, and oftentimes public, digital ledger consisting of records called blocks that is used to record transactions ...",
-    img: "https://blogs.iadb.org/caribbean-dev-trends/wp-content/uploads/sites/34/2017/12/Blockchain1.jpg",
+      "Blockchain: a decentralized, distributed, and oftentimes public, digital ledger consisting ...",
+    img: "/Blockchain1.jpeg",
     tags: ["#Blockchain, ", "#Ethereum"],
   },
   {
     heading: "Business & finance · Trending",
     description:
-      "online virtual environment that incorporates a broad range of Internet functions",
-    img: "https://images.theconversation.com/files/429939/original/file-20211103-25-13vyyra.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      "Online virtual environment that incorporates a broad range of Internet functions",
+    img: "/Metaverse.jpeg",
     tags: ["#Metaverse"],
   },
   {
     heading: "Politics · Trending",
     description: "Trump",
-    img: "https://rb.gy/jvuy4v",
     tags: ["#Trump, ", "#Politics"],
   },
 ];
