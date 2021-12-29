@@ -98,6 +98,7 @@ const Widgets = () => {
               <a
                 className="ml-auto bg-white text-black rounded-full font-bold text-sm py-1.5 px-3.5"
                 target="_blank"
+                rel="noreferrer"
                 href={result.link}
               >
                 Follow
