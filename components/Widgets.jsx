@@ -61,7 +61,7 @@ const Widgets = () => {
         </div>
       </div>
       <div className="text-[#d9d9d9] space-y-3 bg-[#15181c] pt-2 rounded-xl w-11/12 xl:w-9/12">
-        <h4 className="font-bold text-xl px-4">What's happening</h4>
+        <h4 className="font-bold text-xl px-4">{`What's happening`}</h4>
         {trendingData.map((result, index) => (
           <Trending key={index} result={result} />
         ))}
