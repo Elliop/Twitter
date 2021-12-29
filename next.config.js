@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ["blogs.iadb.org"],
+    domains: ["pbs.twimg.com"],
   },
 };
