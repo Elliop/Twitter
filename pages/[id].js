@@ -17,6 +17,7 @@ import { db } from "../firebase";
 import { ArrowLeftIcon } from "@heroicons/react/solid";
 import Head from "next/head";
 import Login from "../components/Login";
+import Comment from "../components/Comment";
 
 const PostPage = ({ providers }) => {
   const { data: session } = useSession();
@@ -24,6 +25,7 @@ const PostPage = ({ providers }) => {
   const router = useRouter();
   const { id } = router.query;
   const [post, setPost] = useState();
+  const [comments, setComments] = useState([]);
 
   useEffect(
     () =>
@@ -31,6 +33,18 @@ const PostPage = ({ providers }) => {
         setPost(snapshot.data());
       }),
     [db]
+  );
+
+  useEffect(
+    () =>
+      onSnapshot(
+        query(
+          collection(db, "posts", id, "comments"),
+          orderBy("timestamp", "desc")
+        ),
+        (snapshot) => setComments(snapshot.docs)
+      ),
+    [db, id]
   );
 
   if (!session) return <Login providers={providers} />;
@@ -59,6 +73,17 @@ const PostPage = ({ providers }) => {
             Tweet
           </div>
           <Post id={id} post={post} postPage />
+          {comments.length > 0 && (
+            <div className="pb-72">
+              {comments.map((comment) => (
+                <Comment
+                  key={comment.id}
+                  id={comment.id}
+                  comment={comment.data()}
+                />
+              ))}
+            </div>
+          )}
         </div>
         {isOpen && <Modal />}
       </main>
