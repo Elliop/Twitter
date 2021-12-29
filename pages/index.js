@@ -18,7 +18,7 @@ export default function Home({ providers }) {
     <div>
       <Head>
         <title>Twitter</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/twitter.svg" />
       </Head>
       <main className="flex bg-black min-h-screen max-w-[1500px] mx-auto">
         <Sidebar />
