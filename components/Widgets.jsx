@@ -1,5 +1,49 @@
 import { SearchIcon } from "@heroicons/react/outline";
 
+const trendingData = [
+  {
+    heading: "Blockchain Technology? How Does It Work?",
+    description:
+      "Blockchain: a decentralized, distributed, and oftentimes public, digital ledger consisting of records called blocks that is used to record transactions ...",
+    img: "https://blogs.iadb.org/caribbean-dev-trends/wp-content/uploads/sites/34/2017/12/Blockchain1.jpg",
+    tags: ["#Blockchain, ", "#Ethereum"],
+  },
+  {
+    heading: "Business & finance · Trending",
+    description:
+      "online virtual environment that incorporates a broad range of Internet functions",
+    img: "https://images.theconversation.com/files/429939/original/file-20211103-25-13vyyra.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+    tags: ["#Metaverse"],
+  },
+  {
+    heading: "Politics · Trending",
+    description: "Trump",
+    img: "https://rb.gy/jvuy4v",
+    tags: ["#Trump, ", "#Politics"],
+  },
+];
+
+const followData = [
+  {
+    userImg:
+      "https://pbs.twimg.com/profile_images/1399020768713916423/Ln2tk7R9_400x400.jpg",
+    username: "Elliop",
+    tag: "@Elliop_Sh",
+  },
+  {
+    userImg:
+      "https://pbs.twimg.com/profile_images/1474910968157249536/FS8-70Ie_400x400.jpg",
+    username: "Elon Musk",
+    tag: "@Elonmusk",
+  },
+  {
+    userImg:
+      "https://pbs.twimg.com/profile_images/1466001345324875784/4RrjsTR__400x400.jpg",
+    username: "Binance",
+    tag: "@Binance",
+  },
+];
+
 const Widgets = () => {
   return (
     <div className="hidden lg:inline ml-8 xl:w-[450px] py-1 space-y-5">
