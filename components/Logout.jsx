@@ -28,12 +28,8 @@ const Logout = () => {
       </div>
 
       <Transition.Root show={isOpen} as={Fragment}>
-        <Dialog
-          as="div"
-          className="fixed -bottom-60 left-16"
-          onClose={setIsOpen}
-        >
-          <div className="absolute bottom-0 left-20">
+        <Dialog as="div" className="fixed bottom-24" onClose={setIsOpen}>
+          <div className="flex ml-4 xl:ml-24 2xl:ml-48">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -45,13 +41,6 @@ const Logout = () => {
             >
               <Dialog.Overlay className="fixed inset-0 bg-transparent transition-opacity" />
             </Transition.Child>
-            {/* This elm is to trick the browser into centring the modal contents :3 */}
-            <span
-              className="hidden sm:inline-block sm:align-middle sm:h-screen"
-              aria-hidden="true"
-            >
-              &#8203;
-            </span>
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"

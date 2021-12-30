@@ -9,7 +9,6 @@ import {
   ClipboardListIcon,
   UserIcon,
   DotsCircleHorizontalIcon,
-  DotsHorizontalIcon,
 } from "@heroicons/react/outline";
 import Logout from "./Logout";
 
