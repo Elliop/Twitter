@@ -6,7 +6,7 @@ This is a Twitter clone project built with React.js, Next.js, and Tailwind CSS. 
 
 - **User Authentication:** Users can log in to the application using their Google account, leveraging the Google Sign-In API for secure and convenient authentication.
 
-- **Posting Tweets:** Authenticated users can compose and publish new tweets. These tweets will be displayed on the user's profile and in the main feed.
+- **Posting Tweets:** Authenticated users can compose and publish new tweets. These tweets will be displayed on the main feed.
 
 - **Deleting Tweets:** Users have the ability to delete their own tweets if they no longer wish to keep them visible.
 
