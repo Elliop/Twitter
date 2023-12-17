@@ -34,7 +34,7 @@ const followData = [
   },
   {
     userImg:
-      "https://pbs.twimg.com/profile_images/1474910968157249536/FS8-70Ie_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1683325380441128960/yRsRRjGO_400x400.jpg",
     username: "Elon Musk",
     tag: "@Elonmusk",
   },
