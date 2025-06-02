@@ -5,7 +5,7 @@ import {
   HeartIcon,
   ShareIcon,
 } from "@heroicons/react/outline";
-import Moment from "react-moment";
+import TimeAgo from "./TimeAgo";
 
 const Comment = ({ comment }) => {
   return (
@@ -31,7 +31,7 @@ const Comment = ({ comment }) => {
             </div>{" "}
             ·{" "}
             <span className="hover:underline text-sm sm:text-[15px]">
-              <Moment fromNow>{comment?.timestamp?.toDate()}</Moment>
+              <TimeAgo timestamp={comment?.timestamp?.toDate()} />
             </span>
             <p className="text-[#d9d9d9] mt-0.5 max-w-lg overflow-scroll scrollbar-hide text-[15px] sm:text-base">
               {comment?.comment}

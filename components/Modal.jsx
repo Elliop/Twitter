@@ -19,7 +19,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
-import Moment from "react-moment";
+import TimeAgo from "./TimeAgo";
 
 function Modal() {
   const { data: session } = useSession();
@@ -114,7 +114,7 @@ function Modal() {
                       </div>{" "}
                       ·{" "}
                       <span className="hover:underline text-sm sm:text-[15px]">
-                        <Moment fromNow>{post?.timestamp?.toDate()}</Moment>
+                        <TimeAgo timestamp={post?.timestamp?.toDate()} />
                       </span>
                       <p className="text-[#d9d9d9] text-[15px] sm:text-base">
                         {post?.text}

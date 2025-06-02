@@ -33,14 +33,12 @@ const followData = [
     link: "https://twitter.com/Elliop_Sh",
   },
   {
-    userImg:
-      "https://pbs.twimg.com/profile_images/1683325380441128960/yRsRRjGO_400x400.jpg",
+    userImg: "/elon-musk.jpg",
     username: "Elon Musk",
     tag: "@Elonmusk",
   },
   {
-    userImg:
-      "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK_400x400.png",
+    userImg: "/reactjs.png",
     username: "React",
     tag: "@reactjs",
   },
