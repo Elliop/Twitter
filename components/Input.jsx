@@ -36,6 +36,7 @@ function Input() {
       username: session.user.name,
       userImg: session.user.image,
       tag: session.user.tag,
+      email: session.user.email,
       text: input,
       timestamp: serverTimestamp(),
     });
